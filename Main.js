@@ -5,6 +5,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { styles } from './Styles.js';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { CalendarScreenComponent } from './CalendarScreen.js';
+import { MenuOption, MenuProvider } from 'react-native-popup-menu';
 const Tab = createBottomTabNavigator();
 
 export function Main({ logout }) {
@@ -48,10 +50,13 @@ export function Main({ logout }) {
 
 function Calendar ({ navigation }) {
     return (
-        <View style={styles.loginContainer}>
-            <Text>Calendar</Text>
-            <Icon name="calendar"></Icon>
-        </View>
+        <MenuProvider>
+        <CalendarScreenComponent/>
+        {/* // <View style={styles.loginContainer}>
+        //     <Text>Calendar</Text>
+        //     <Icon name="calendar"></Icon>
+        // </View> */}
+        </MenuProvider>
     );
 }
 
