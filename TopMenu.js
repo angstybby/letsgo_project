@@ -4,12 +4,12 @@ import { styles } from './Styles';
 
 export function TopMenuComponent () {
 
-  const profPicPlaceholder = 'https://static.vecteezy.com/system/resources/previews/010/056/184/original/people-icon-sign-symbol-design-free-png.png';
+  const calendarIconPlaceholder = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Calendar_Icon_White.svg/1832px-Calendar_Icon_White.svg.png';
 
   return (
     <View style={styles.topMenuContainer}>
-      <View style={styles.profilePictureContainer}>
-        <Image source={{ uri: profPicPlaceholder }} style={styles.profilePicture} />
+      <View style={styles.calendarIconContainer}>
+        <Image source={{ uri: calendarIconPlaceholder }} style={styles.calendarIcon} />
       </View>
       <View style={styles.calendarInfoContainer}>
         <Text style={styles.calendarInfoText}>Members: 8</Text>

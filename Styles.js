@@ -32,10 +32,10 @@ export const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: '#292929',
       },
-      profilePictureContainer: {
+      calendarIconContainer: {
         marginRight: 10,
       },
-      profilePicture: {
+      calendarIcon: {
         width: 70,
         height: 70,
         marginLeft: 10,
