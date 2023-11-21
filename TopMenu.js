@@ -22,6 +22,7 @@ export function TopMenuComponent () {
               <View style={{ padding: 10, backgroundColor: 'white' }}>
                 <MenuOption text="Other Calendar Name" />
                 <MenuOption text="Another Calendar Name" />
+                <MenuOption text="Create New Calendar" customStyles={{ optionText: { color: 'red' }}}/>
               </View>
             </MenuOptions>
           </Menu>
