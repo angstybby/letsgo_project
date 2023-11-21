@@ -63,8 +63,13 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontWeight: '200',
     },
-    plusIconContainer: {
+    calendarIconsContainer: {
         marginRight: 10,
-        paddingBottom: 50,
+        bottom: 20,
+    },
+    meatballIcon: {
+        fontSize: 45,
+        color: 'white',
+        fontWeight: '200',
     }
 });
