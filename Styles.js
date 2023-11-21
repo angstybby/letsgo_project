@@ -22,4 +22,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 10,
     },
+    calendar: {
+        marginTop: 200,
+    }
 });

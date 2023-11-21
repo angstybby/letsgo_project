@@ -5,6 +5,7 @@ import { Text, View, Pressable, Image } from 'react-native';
 import { styles } from './Styles.js';
 import { CustomInputText } from './CustomInputText.js';
 import { CustomButton } from './CustomButton.js';
+import { CalendarComponent } from './Calendar.js';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,8 @@ export function StartUp ({ navigation }) {
             <Stack.Screen name="Start" component={StartScreen} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Register" component={Register} />
+            {/* might need to change navigation for calendar vv */}
+            <Stack.Screen name="Calendar" component={CalendarComponent} />
         </Stack.Navigator>
     );
 }
@@ -38,18 +41,24 @@ function StartScreen ({ navigation }) {
 }
 
 function Login ({ navigation }) {
+    const handleConfirm = () => {
+        navigation.navigate('Calendar');
+    };
     return (
         <View style={styles.loginContainer}>
             <View><Image  source={require('./assets/icon.png')} style={{ width: 200, height: 200 }}/></View>
             
             <View><CustomInputText heading={'username or email'}/></View>
             <View><CustomInputText heading={'password'}/></View>
-            <View style={{marginTop: 20}}><CustomButton body={'Confirm'}/></View>
+            <View style={{marginTop: 20}}><CustomButton body={'Confirm'} onPress={handleConfirm}/></View>
         </View>
     );
 }
 
 function Register ({ navigation }) {
+    const handleConfirm = () => {
+        navigation.navigate('Calendar');
+    };
     return (
         <View style={styles.loginContainer}>
             <View><Image  source={require('./assets/icon.png')} style={{ width: 200, height: 200 }}/></View>
@@ -58,7 +67,7 @@ function Register ({ navigation }) {
             <View><CustomInputText heading={'email'}/></View>
             <View><CustomInputText heading={'new password'}/></View>
             <View><CustomInputText heading={'confirm password'}/></View>
-            <View style={{marginTop: 20}}><CustomButton body={'Confirm'}/></View>
+            <View style={{marginTop: 20}}><CustomButton body={'Confirm'} onPress={handleConfirm}/></View>
         </View>
     );
 }
