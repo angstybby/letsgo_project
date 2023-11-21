@@ -3,11 +3,11 @@ import { Text, View, Pressable, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { styles } from './Styles.js';
-import { CustomInputText } from './CustomInputText.js';
-import { CustomButton } from './CustomButton.js';
+import { CustomInputText } from './Components/CustomInputText.js';
+import { CustomButton } from './Components/CustomButton.js';
 // import { CalendarComponent } from './Calendar.js';
 import { CalendarScreenComponent
- } from './CalendarScreen.js';
+ } from './Calendar/CalendarScreen.js';
 const Stack = createStackNavigator();
 
 export function StartUp({ login }) {

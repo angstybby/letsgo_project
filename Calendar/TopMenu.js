@@ -1,22 +1,23 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
-import { styles } from './Styles';
-import { AddEventMenuComponent } from './AddEventMenu';
-import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { styles } from '../Styles';
+import { AddEventMenuComponent } from '../AddEventMenu';
+import { Menu, MenuProvider, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
 
 export function TopMenuComponent () {
 
   const calendarIconPlaceholder = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Calendar_Icon_White.svg/1832px-Calendar_Icon_White.svg.png';
 
   return (
-    <>
+        <>
       <View style={styles.calendarTitleDropdown}>
         <Text style={styles.calendarInfoTextTitle}>Calendar Name</Text>
         <View style={styles.dropDownContainer}>
           <Menu>
             <MenuTrigger>
               {/* <Text style={styles.dropDown}>v</Text> */}
-              <Image style={styles.dropDown} source={require('./assets/dropdown.png')} />
+              <Icon name={'chevron-down-outline'}/>
             </MenuTrigger>
             <MenuOptions>
               <View style={{ padding: 10, backgroundColor: 'white' }}>

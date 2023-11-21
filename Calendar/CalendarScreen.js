@@ -1,8 +1,8 @@
-import React, { useState, Fragment } from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import React, { Fragment } from 'react';
+import { View } from 'react-native';
 import { TopMenuComponent } from './TopMenu';
 import { CalendarComponent } from './Calendar';
-import { styles } from './Styles';
+import { styles } from '../Styles';
 
 export function CalendarScreenComponent () {
   

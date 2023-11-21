@@ -1,7 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+
+import { CalendarScreenComponent } from './Calendar/CalendarScreen.js'
 import { styles } from './Styles.js';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -10,15 +12,16 @@ const Tab = createBottomTabNavigator();
 export function Main({ logout }) {
     return (
         <Tab.Navigator
-        tabBarOptions={{
-            tabStyle: { marginTop: 3 },
-            labelStyle: { marginBottom: -9 },
-          }}
+            tabBarOptions={{
+                tabStyle: { marginTop: 3 },
+                labelStyle: { marginBottom: -9 },
+            }}
         >
             <Tab.Screen
                 name="Calendar"
-                component={Calendar}
+                component={CalendarTab}
                 options={{
+                    headerShown: false,
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="calendar" size={30}></Icon>
                     ),
@@ -26,7 +29,7 @@ export function Main({ logout }) {
             />
             <Tab.Screen
                 name="Discover"
-                component={Discover}
+                component={DiscoverTab}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="compass" size={35}></Icon>
@@ -35,7 +38,7 @@ export function Main({ logout }) {
             />
             <Tab.Screen 
                 name="Account"
-                component={Account}
+                component={AccountTab}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="person" size={30}></Icon>
@@ -46,16 +49,11 @@ export function Main({ logout }) {
     );
 }
 
-function Calendar ({ navigation }) {
-    return (
-        <View style={styles.loginContainer}>
-            <Text>Calendar</Text>
-            <Icon name="calendar"></Icon>
-        </View>
-    );
+function CalendarTab ({ navigation }) {
+    return (<CalendarScreenComponent/>);
 }
 
-function Account ({ navigation }) {
+function AccountTab ({ navigation }) {
     return (
         <View style={styles.loginContainer}>
             <Text>Account</Text>
@@ -63,7 +61,7 @@ function Account ({ navigation }) {
     );
 }
 
-function Discover ({ navigation }) {
+function DiscoverTab ({ navigation }) {
     return (
         <View style={styles.loginContainer}>
             <Text>Discover</Text>
