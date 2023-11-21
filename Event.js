@@ -2,14 +2,15 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
-
-import React from 'react';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import React, { useState } from 'react';
 import { StartUp } from './StartUp.js';
 import { styles } from './Styles.js';
+import { StyleSheet, View, Text, TouchableOpacity, Image, Button } from 'react-native';
 
-const [image, setImage] = useState(null);
+// Event Object: Title, Date + Time, Image, Location, Description
 
-export function eventView ({ navigation }) {
+export function EventView () {
     // header image given by user
     // - back button - edit button
     // DETAILS
@@ -33,23 +34,26 @@ export function eventView ({ navigation }) {
   );
 }
 
-const chooseEventImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: ImagePicker.MediaTypeOptions.All,
-        allowsEditing: true,
-        aspect: [4, 3],
-        quality: 1,
-      });
-
-    console.log(result);
-
-    if (!result.canceled) {
-        setImage(result.assets[0].uri);
-    }
-}
 
 // state to decide if its edit or create?
-export function eventForms ({ navigation }) {
+export function eventForms ({ edit }) {
+    const [image, setImage] = useState(null);
+
+    const chooseEventImage = async () => {
+        let result = await ImagePicker.launchImageLibraryAsync({
+            mediaTypes: ImagePicker.MediaTypeOptions.All,
+            allowsEditing: true,
+            aspect: [4, 3],
+            quality: 1,
+          });
+    
+        console.log(result);
+    
+        if (!result.canceled) {
+            setImage(result.assets[0].uri);
+        }
+    }
+
     return (
         <View styles={styles.eventForms}>        
             <StatusBar style="auto" />

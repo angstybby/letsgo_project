@@ -4,7 +4,7 @@ import { TopMenuComponent } from './TopMenu';
 import { CalendarComponent } from './Calendar';
 import { styles } from './Styles';
 
-export function CalendarScreenComponent () {
+export function CalendarScreenComponent ({ navigation }) {
   
 
   return (
