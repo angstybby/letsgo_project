@@ -22,31 +22,49 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 10,
     },
-    calendar: {
-        marginTop: 20,
-    },
+    calendar: {},
     topMenuContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: 10,
         backgroundColor: '#292929',
-      },
-      calendarIconContainer: {
-        marginRight: 10,
-      },
-      calendarIcon: {
-        width: 70,
-        height: 70,
-        marginLeft: 10,
-      },
-      calendarInfoContainer: {
-        flex: 1,
-        marginLeft: 10,
-      },
-      calendarInfoText: {
+    },
+    calendarIconContainer: {
+      marginRight: 10,
+    },
+    calendarIcon: {
+      width: 70,
+      height: 70,
+      marginLeft: 10,
+    },
+    calendarInfoContainer: {
+      flex: 1,
+      marginLeft: 10,
+    },
+    calendarInfoText: {
+      color: 'white',
+      fontSize: 12,
+      marginBottom: 5,
+    },
+    calendarInfoTextTitle: {
         color: 'white',
-        fontSize: 14,
+        fontSize: 16,
         marginBottom: 5,
-      },
+        fontWeight: 'bold',
+    },
+    calendarScreenContainer: {
+        flex: 1,
+        flexDirection: 'column',
+        marginTop: 100,
+    },
+    plusIcon: {
+        fontSize: 45,
+        color: 'white',
+        fontWeight: '200',
+    },
+    plusIconContainer: {
+        marginRight: 10,
+        paddingBottom: 50,
+    }
 });

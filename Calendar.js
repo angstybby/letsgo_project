@@ -2,7 +2,6 @@ import React, { useState, Fragment, useCallback, useMemo } from 'react';
 import { Text } from 'react-native';
 import { Calendar, CalendarUtils } from 'react-native-calendars';
 import { styles } from './Styles';
-import { TopMenuComponent } from './TopMenu';
 
 const todaysDate = new Date();
 
