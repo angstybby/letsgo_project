@@ -20,6 +20,7 @@ export default function App() {
     };
 
     return (
+        <MenuProvider>
         <NavigationContainer styles={styles.site}>
             {!isLoggedIn ? (
                 <StartUp login={login}/>
@@ -28,5 +29,6 @@ export default function App() {
             )}
             <StatusBar style="auto" />
         </NavigationContainer>
+        </MenuProvider>
     );
 }
