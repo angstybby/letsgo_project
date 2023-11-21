@@ -5,8 +5,9 @@ import { Text, View, Pressable, Image } from 'react-native';
 import { styles } from './Styles.js';
 import { CustomInputText } from './CustomInputText.js';
 import { CustomButton } from './CustomButton.js';
-import { CalendarComponent } from './Calendar.js';
-
+// import { CalendarComponent } from './Calendar.js';
+import { CalendarScreenComponent
+ } from './CalendarScreen.js';
 const Stack = createStackNavigator();
 
 export function StartUp ({ navigation }) {
@@ -22,7 +23,7 @@ export function StartUp ({ navigation }) {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Register" component={Register} />
             {/* might need to change navigation for calendar vv */}
-            <Stack.Screen name="Calendar" component={CalendarComponent} />
+            <Stack.Screen name="Calendar" component={CalendarScreenComponent} />
         </Stack.Navigator>
     );
 }

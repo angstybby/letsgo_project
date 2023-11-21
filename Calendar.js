@@ -2,6 +2,7 @@ import React, { useState, Fragment, useCallback, useMemo } from 'react';
 import { Text } from 'react-native';
 import { Calendar, CalendarUtils } from 'react-native-calendars';
 import { styles } from './Styles';
+import { TopMenuComponent } from './TopMenu';
 
 const todaysDate = new Date();
 
@@ -41,7 +42,6 @@ export function CalendarComponent ({navigation}) {
   
   return (
     <Fragment>
-      <Text style={styles.text}>Calendar with selectable date</Text>
       <Calendar
         theme={{
           backgroundColor: '#ffffff',

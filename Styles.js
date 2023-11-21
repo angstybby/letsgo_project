@@ -23,6 +23,30 @@ export const styles = StyleSheet.create({
         gap: 10,
     },
     calendar: {
-        marginTop: 200,
-    }
+        marginTop: 20,
+    },
+    topMenuContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: 10,
+        backgroundColor: '#292929',
+      },
+      profilePictureContainer: {
+        marginRight: 10,
+      },
+      profilePicture: {
+        width: 70,
+        height: 70,
+        marginLeft: 10,
+      },
+      calendarInfoContainer: {
+        flex: 1,
+        marginLeft: 10,
+      },
+      calendarInfoText: {
+        color: 'white',
+        fontSize: 14,
+        marginBottom: 5,
+      },
 });
