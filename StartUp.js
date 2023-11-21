@@ -23,7 +23,7 @@ export function StartUp ({ navigation }) {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Register" component={Register} />
             {/* might need to change navigation for calendar vv */}
-            <Stack.Screen name="Calendar" component={CalendarScreenComponent} />
+            <Stack.Screen name="Calendar" component={CalendarScreenComponent} options={{headerLeft: () => null}} />
         </Stack.Navigator>
     );
 }

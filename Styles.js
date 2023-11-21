@@ -23,11 +23,15 @@ export const styles = StyleSheet.create({
         gap: 10,
     },
     calendar: {},
+    calendarTitleDropdown: {
+        flexDirection: 'row',
+        alignSelf: 'center',
+    },
     topMenuContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: 10,
+        padding: 5,
         backgroundColor: '#292929',
     },
     calendarIconContainer: {
@@ -44,12 +48,12 @@ export const styles = StyleSheet.create({
     },
     calendarInfoText: {
       color: 'white',
-      fontSize: 12,
+      fontSize: 14,
       marginBottom: 5,
     },
     calendarInfoTextTitle: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 18,
         marginBottom: 5,
         fontWeight: 'bold',
     },
@@ -71,5 +75,10 @@ export const styles = StyleSheet.create({
         fontSize: 45,
         color: 'white',
         fontWeight: '200',
-    }
+    },
+    dropDown: {
+        width: 20,
+        height: 25,
+        marginLeft: 10,
+    },
 });

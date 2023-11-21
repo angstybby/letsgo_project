@@ -26,7 +26,7 @@ export function CalendarComponent ({navigation}) {
 
   const marked = useMemo(() => {
     return {
-      [getDate(-1)]: {
+      [getDate(4)]: {
         dotColor: 'grey',
         marked: true
       },
