@@ -22,4 +22,14 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 10,
     },
+    event: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 5,
+    },
+    eventForms: {
+
+    },
 });
