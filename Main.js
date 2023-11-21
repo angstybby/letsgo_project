@@ -16,8 +16,9 @@ export function Main({ logout }) {
                 tabStyle: { marginTop: 3 },
                 labelStyle: { marginBottom: -9 },
             }}
+            sceneContainerStyle={{backgroundColor: '#292929'}}
         >
-            <Tab.Screen
+            <Tab.Screen 
                 name="Calendar"
                 component={CalendarTab}
                 options={{
@@ -50,7 +51,7 @@ export function Main({ logout }) {
 }
 
 function CalendarTab ({ navigation }) {
-    return (<CalendarScreenComponent/>);
+    return (<CalendarScreenComponent />);
 }
 
 function AccountTab ({ navigation }) {

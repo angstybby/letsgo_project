@@ -17,7 +17,7 @@ export function TopMenuComponent () {
           <Menu>
             <MenuTrigger>
               {/* <Text style={styles.dropDown}>v</Text> */}
-              <Icon name={'chevron-down-outline'}/>
+              <Icon name={'chevron-down-outline'} color="white" size={20} paddingLeft={5}/>
             </MenuTrigger>
             <MenuOptions>
               <View style={{ padding: 10, backgroundColor: 'white' }}>

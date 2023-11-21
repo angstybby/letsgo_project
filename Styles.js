@@ -22,7 +22,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 10,
     },
-    calendar: {},
     calendarTitleDropdown: {
         flexDirection: 'row',
         alignSelf: 'center',
@@ -76,9 +75,5 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontWeight: '200',
     },
-    dropDown: {
-        width: 20,
-        height: 25,
-        marginLeft: 10,
-    }
+
 });
