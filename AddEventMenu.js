@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
 import { styles } from './Styles';
-import { eventForms, eventView } from './Event'
 import { useNavigation } from '@react-navigation/native';
 
 export function AddEventMenuComponent () {
@@ -27,7 +26,7 @@ export function AddEventMenuComponent () {
           <View style={{ padding: 10, backgroundColor: 'white' }}>
             <MenuOption 
               text="Add Event"
-              onSelect={() => navigation.navigate('EventView')}
+              onSelect={() => navigation.navigate('AddEvent')}
             />
           </View>
         </MenuOptions>

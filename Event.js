@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { StartUp } from './StartUp.js';
 import { styles } from './Styles.js';
 import { StyleSheet, View, Text, TouchableOpacity, Image, Button } from 'react-native';
+import { CustomInputText } from './CustomInputText.js';
 
 // Event Object: Title, Date + Time, Image, Location, Description
 
@@ -36,7 +37,7 @@ export function EventView () {
 
 
 // state to decide if its edit or create?
-export function eventForms ({ edit }) {
+export function EventForms ({ edit }) {
     const [image, setImage] = useState(null);
 
     const chooseEventImage = async () => {
@@ -58,25 +59,24 @@ export function eventForms ({ edit }) {
         <View styles={styles.eventForms}>        
             <StatusBar style="auto" />
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Button title="Pick an image from camera roll" onPress={pickImage} />
+                <Button title="Pick an image from camera roll" onPress={chooseEventImage} />
                 {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
             </View>
             <View><CustomInputText heading={'Title'}/></View>
-            <View>Date Upload</View>
+            <Text>Date Upload</Text>
             <View><CustomInputText heading={'Location'}/></View>
             <View><CustomInputText heading={'Description'}/></View>
         </View>
       );
 }
 
-// export function editEvent ({ navigation }) {
-//     return (
-//         <View styles={styles.eventForms}>        
-//             <StatusBar style="auto" />
-    
-//         </View>
-//       );
-// }
+export function AddEvent ({ navigation }) {
+    return (
+        <View>        
+            <EventForms edit={false}/>
+        </View>
+      );
+}
 
 const stylesEvent = StyleSheet.create({
     titleText: {

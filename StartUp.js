@@ -8,7 +8,7 @@ import { CustomButton } from './CustomButton.js';
 // import { CalendarComponent } from './Calendar.js';
 import { CalendarScreenComponent
  } from './CalendarScreen.js';
-import { EventView } from './Event.js'
+import { EventView, AddEvent } from './Event.js'
 
 const Stack = createStackNavigator();
 
@@ -27,6 +27,7 @@ export function StartUp ({ navigation }) {
             {/* might need to change navigation for calendar vv */}
             <Stack.Screen name="Calendar" component={CalendarScreenComponent} options={{headerLeft: () => null}} />
             <Stack.Screen name="EventView" component={EventView} />
+            <Stack.Screen name="AddEvent" component={AddEvent} />
         </Stack.Navigator>
     );
 }
