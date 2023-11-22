@@ -87,6 +87,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         gap: 5,
+        fontSize: 25,
+        color: 'white',
     },
     eventForms: {
         flex: 1,

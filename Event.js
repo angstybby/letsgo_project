@@ -25,17 +25,17 @@ export function EventView ({ route, navigation }) {
     // - title
     // - dates
     // - location
-    // - description
+    // - descriptionsource={require('./assets/icon.png')}
   return (
     <View style={styles.event}>        
         <View style={stylesEvent.headerContainer}>
-
+            <Image source={require('./assets/event-test.jpeg')} style={{ width: 200, height: 200 }} />
         </View>
         <View style={stylesEvent.detailsContainer}>
-            <Text>{event.title}</Text>
-            <Text>Dates</Text>
-            <Text>Location</Text>
-            <Text>Description</Text>
+            <Text style={styles.calendarInfoTextTitle}>{event.title}</Text>
+            <Text style={styles.calendarInfoText}>{event.date.toLocaleString()}</Text>
+            <Text style={styles.calendarInfoText}>{event.location}</Text>
+            <Text style={styles.calendarInfoText}>{event.description}</Text>
         </View>
     </View>
   );
