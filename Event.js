@@ -4,7 +4,7 @@ import * as ImagePicker from 'expo-image-picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import React, { useState } from 'react';
 import { styles } from './Styles.js';
-import { StyleSheet, View, Text, TouchableOpacity, Image, Button, FlatList } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Image, Button, FlatList, SafeAreaView, } from 'react-native';
 import { CustomInputText } from './Components/CustomInputText.js';
 import { CustomButton } from './Components/CustomButton.js';
 
@@ -160,8 +160,8 @@ export function AllEvents ({}) {
         return (
             <TouchableOpacity onPress={onPress}>
                 <View>
-                    <Text style={stylesEvent.headingText}>{item.title}</Text>
-                    <Text style={stylesEvent.location}>{item.location}</Text>
+                    <Text style={styles.upcomingEventHeading}>{item.title}</Text>
+                    <Text style={styles.upcomingEventLocation}>{item.location}</Text>
                 </View>
             </TouchableOpacity>
         )
@@ -172,8 +172,8 @@ export function AllEvents ({}) {
     }
 
     return (
-        <View>
-            <Text style={styles.calendarInfoTextTitle}>Upcoming Events</Text>
+        <View style={styles.upcomingEventsContainer}>
+            <Text style={styles.upcomingEvents}>Upcoming Events</Text>
             <FlatList
                 data={events}
                 renderItem={renderItem}

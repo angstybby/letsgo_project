@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
         paddingTop: 20,
         paddingBottom: 10,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
 
     },
     topMenuContainer: {
@@ -45,10 +45,12 @@ export const styles = StyleSheet.create({
         backgroundColor: '#292929',
     },
     calendarName: {
-        paddingLeft: 15,
         color: 'white',
         fontSize: 18,
         fontWeight: 'bold',
+        paddingLeft: 20,
+        paddingTop: 10,
+        paddingBottom: 10,
     },
     calendarIconContainer: {
       marginRight: 10,
@@ -109,5 +111,30 @@ export const styles = StyleSheet.create({
         fontSize: 45,
         color: 'white',
         fontWeight: '200',
+    },
+    upcomingEvents: {
+        paddingBottom: 5,
+        color: 'white',
+        fontSize: 18,
+        fontWeight: '600',
+    },
+    upcomingEventsContainer: {
+        paddingTop: 15,
+        paddingLeft: 20,
+        backgroundColor: '#3e3f40',
+        marginTop: 20,
+        paddingBottom: 15,
+        borderRadius: 15,
+    },
+    upcomingEventHeading: {
+        paddingTop: 10,
+        color: 'white',
+        fontSize: 18,
+        fontWeight: '500',
+
+    },
+    upcomingEventLocation: {
+        color: 'white',
     }
+
 });
