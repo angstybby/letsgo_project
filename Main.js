@@ -15,7 +15,8 @@ export function Main({ logout }) {
         <Tab.Navigator
             screenOptions={{
                 tabBarItemStyle: { marginTop: 3 },
-                tabBarLabelStyle: { marginBottom: -9 },
+                tabBarLabelStyle: { marginBottom: -9},
+                tabBarStyle: { backgroundColor: '#d9d9d9' },
             }}
             sceneContainerStyle={{ backgroundColor: '#292929' }}
         >
