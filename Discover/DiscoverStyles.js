@@ -3,10 +3,11 @@ import { StyleSheet } from 'react-native';
 const dStyles = StyleSheet.create({
     discover: {
         padding: 15,
+        paddingBottom: 182,
     },
     discoverHeaderContainer: {
-        paddingTop: 35,
-        paddingBottom: 10,
+        paddingTop: 40,
+        paddingBottom: 15,
     },
     discoverTrackHeading: {
         color: 'white',

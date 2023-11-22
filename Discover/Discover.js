@@ -17,6 +17,7 @@ export default function Discover() {
                     data={discoverData}
                     renderItem={({ item }) => <DiscoverItemTrack data={item} />}
                     ItemSeparatorComponent={() => <View style={{ height: 30 }} />}
+                    ListFooterComponent={<View style={{ height: 70 }} />}
                 />
             </View>
         </View>

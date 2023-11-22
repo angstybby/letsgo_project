@@ -5,10 +5,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import dStyles from './DiscoverStyles.js'
 import { styles } from '../Styles.js';
 
-function formatDate( date ) {
-    var newDate = '';
-    newDate += date.day;
-    return newDate;
+function formatDate(date) {
+    var temp = date.split(' ');
+    return(' ' + temp[1] + ' ' + temp[2].substring(0, 3) + ', ' + temp[3]);
 }
 
 export default function DiscoverItemTrack({ data }) {
@@ -37,7 +36,7 @@ function DiscoverItemSummary({ data }) {
             :
         (<>
             <Image style={dStyles.discoverImage} source={data.image}/>
-            <Text style={dStyles.discoverDateText}><Text style={styles.bold}>{formatDate(data.date)}</Text> 25 NOV 2023, 6:30pm</Text>
+            <Text style={dStyles.discoverDateText}><Text style={styles.bold}>{data.date.substring(0, 3)}</Text>{formatDate(data.date)}</Text>
             <Text style={dStyles.discoverTitleText}>{data.title}</Text>
         </>)
         }

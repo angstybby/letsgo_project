@@ -9,14 +9,20 @@ const discoverData = [
             {
                 image: require('../assets/paramore.jpg'),
                 title: 'Paramore',
-                date: new Date(2023,11,25,6,30),
+                date: 'Saturday 25th November, 6:30pm',
                 location: 'The Domain',
             },
             {
-                image: require('../assets/paramore.jpg'),
-                title: 'Paramore',
-                date: new Date(2023,11,25,6,30),
-                location: 'The Domain',
+                image: require('../assets/fob.jpg'),
+                title: 'Fall Out Boy',
+                date: 'Saturday 2nd December, 8pm',
+                location: 'Centennial Park',
+            },
+            {
+                image: require('../assets/fooFighters.jpg'),
+                title: 'Foo Fighters',
+                date: 'Saturday 9th December, 7:30pm',
+                location: 'Accor Stadium',
             }
         ]
     },
@@ -24,15 +30,15 @@ const discoverData = [
         title: 'In Your Area',
         content: [
             {
-                image: require('../assets/paramore.jpg'),
-                title: 'Paramore',
-                date: new Date(2023,11,25,6,30),
-                location: 'The Domain',
+                image: require('../assets/fooFighters.jpg'),
+                title: 'Foo Fighters',
+                date: 'Saturday 9th December, 7:30pm',
+                location: 'Accor Stadium',
             },
             {
                 image: require('../assets/paramore.jpg'),
                 title: 'Paramore',
-                date: new Date(2023,11,25,6,30),
+                date: 'Saturday 25th November, 6:30pm',
                 location: 'The Domain',
             }
         ]
