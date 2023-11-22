@@ -14,9 +14,9 @@ export function TopMenuComponent () {
                 <MenuTrigger><Text style={styles.calendarName}>Calendar Name...   <Icon name={'chevron-down-outline'} color="white" size={20}/></Text></MenuTrigger>
                 <MenuOptions>
                     <View style={{ padding: 10, backgroundColor: 'white' }}>
-                        <MenuOption text="Create New Calendar" customStyles={{ optionText: { color: 'red' }}}/>
                         <MenuOption text="Other Calendar Name" />
                         <MenuOption text="Another Calendar Name" />
+                        <MenuOption text="Create New Calendar" customStyles={{ optionText: { color: 'red' }}}/>
                     </View>
                 </MenuOptions>
             </Menu></View>
