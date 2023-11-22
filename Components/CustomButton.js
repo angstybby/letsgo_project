@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import React from 'react';
+import { Pressable, Text } from 'react-native';
 import { StyleSheet } from 'react-native';
 
 export function CustomButton ({ body, onPress }) {

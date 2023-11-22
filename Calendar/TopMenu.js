@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { styles } from '../Styles';
-import { AddEventMenuComponent } from '../AddEventMenu';
+import { EditCalendarMenu } from './AddEventMenu.js';
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
 
 export function TopMenuComponent () {
@@ -32,7 +32,7 @@ export function TopMenuComponent () {
                 <Text style={styles.calendarInfoText}>Ideas: 5</Text>
             </View>
             <View style={styles.calendarIconsContainer}>
-                <AddEventMenuComponent />
+                <EditCalendarMenu />
             </View>
         </View>
     <View/>

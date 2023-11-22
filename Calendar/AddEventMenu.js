@@ -1,12 +1,11 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
-import { styles } from './Styles';
+import { styles } from '../Styles';
 import { useNavigation } from '@react-navigation/native';
 
-export function AddEventMenuComponent () {
-  const navigation = useNavigation();
+export function EditCalendarMenu () {
   return (
     <View>
         <Menu>
@@ -23,7 +22,8 @@ export function AddEventMenuComponent () {
   );
 }
 
-export function AddEventMenu() {
+export function AddEventMenu({}) {
+    const navigation = useNavigation();
     return (
         <View style={styles.addEventIcon}>
             <Menu>

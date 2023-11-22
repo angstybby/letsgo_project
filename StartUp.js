@@ -5,10 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { styles } from './Styles.js';
 import { CustomInputText } from './Components/CustomInputText.js';
 import { CustomButton } from './Components/CustomButton.js';
-// import { CalendarComponent } from './Calendar.js';
-import { CalendarScreenComponent
- } from './Calendar/CalendarScreen.js';
- import { EventView, AddEvent } from './Event.js'
 
 const Stack = createStackNavigator();
 
@@ -57,7 +53,6 @@ function Login ({ route, navigation }) {
 
 function Register({ route, navigation }) {
     const { login } = route.params;
-
     return (
         <View style={styles.loginContainer}>
             <View><Image  source={require('./assets/icon.png')} style={{ width: 200, height: 200 }}/></View>
