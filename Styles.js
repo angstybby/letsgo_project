@@ -1,7 +1,11 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 export const styles = StyleSheet.create({
-    site: {
+    bold: {
+        fontWeight: 'bold',
+    },
+    text: {
+        color: 'white',
     },
     startContainer: {
         flex: 1,
