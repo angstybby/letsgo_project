@@ -1,9 +1,10 @@
-import React, { useState, Fragment } from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import React, { Fragment } from 'react';
+import { View } from 'react-native';
 import { TopMenuComponent } from './TopMenu';
 import { CalendarComponent } from './Calendar';
-import { AllEvents } from './Event';
-import { styles } from './Styles';
+import { AllEvents, EventView, AddEvent } from '../Event';
+import { styles } from '../Styles';
+import { createStackNavigator } from '@react-navigation/stack';
 
 export function CalendarScreenComponent ({ }) {
   return (

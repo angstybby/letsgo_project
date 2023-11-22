@@ -7,9 +7,9 @@ import React, { useState, useContext, useEffect } from 'react';
 import { StartUp } from './StartUp.js';
 import { styles } from './Styles.js';
 import { StyleSheet, View, Text, TouchableOpacity, Image, Button, FlatList } from 'react-native';
-import { CustomInputText } from './CustomInputText.js';
-import { CustomButton } from './CustomButton.js';
-import App from './App.js';
+import { CustomInputText } from './Components/CustomInputText.js';
+import { CustomButton } from './Components/CustomButton.js';
+
 
 // Event Object: Title, Date + Time, Image, Location, Description
 
@@ -17,7 +17,7 @@ export function EventView ({ route, navigation }) {
     const { event } = route.params;
     if (event == null) {
         // make event with default params
-        event = makeEvent("Sample Title", "Description", "assets\\icon.png", "location", new Date(1598051730000))
+        event = makeEvent("Sample Title", "Description", "./assets/event-test.jpeg", "location", new Date(1598051730000))
     }
     // header image given by user
     // - back button - edit button
@@ -200,31 +200,25 @@ const makeEvent = (title, description, image, location, date) => {
     });
   }
 
-//   export const EventsContext = React.createContext();
-//   export function createEvents() {
-//       const [events, setEvents] = useState([]);
-    
-//       return (
-//         <EventsContext.Provider value={{ events, setEvents }}>
-//           <App />
-//         </EventsContext.Provider>
-//       );
-//   }
-
-// export const [events, setEvents] = useState([]);
 
 const stylesEvent = StyleSheet.create({
     titleText: {
         fontSize: 35
     },
     attributeText: {
-        fontSize: 25
+        fontSize: 25,
+        color: 'white'
     },
     headingText: {
-        fontSize: 30
+        fontSize: 30,
+        color: 'white'
     },
     detailsContainer: {
         alignItems: 'left'
+    },
+    location: {
+        fontSize: 20,
+        color: 'white'
     },
     headerContainer: {
 
