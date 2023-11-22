@@ -89,6 +89,17 @@ export const styles = StyleSheet.create({
         gap: 5,
     },
     eventForms: {
-
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 20,
+        padding: 10,
+        paddingTop: 50,
     },
+    formTitle: {
+        fontSize: 45,
+        color: 'white',
+        fontWeight: '200',
+    }
 });
