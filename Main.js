@@ -3,6 +3,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import Discover from './Discover/Discover.js';
 import { CalendarScreenComponent } from './Calendar/CalendarScreen.js'
 import { styles } from './Styles.js';
 
@@ -12,11 +13,11 @@ const Tab = createBottomTabNavigator();
 export function Main({ logout }) {
     return (
         <Tab.Navigator
-            tabBarOptions={{
-                tabStyle: { marginTop: 3 },
-                labelStyle: { marginBottom: -9 },
+            screenOptions={{
+                tabBarItemStyle: { marginTop: 3 },
+                tabBarLabelStyle: { marginBottom: -9 },
             }}
-            sceneContainerStyle={{backgroundColor: '#292929'}}
+            sceneContainerStyle={{ backgroundColor: '#292929' }}
         >
             <Tab.Screen 
                 name="Calendar"
@@ -32,6 +33,7 @@ export function Main({ logout }) {
                 name="Discover"
                 component={DiscoverTab}
                 options={{
+                    headerShown: false,
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="compass" size={35}></Icon>
                     ),
@@ -54,18 +56,12 @@ function CalendarTab ({ navigation }) {
     return (<CalendarScreenComponent />);
 }
 
+function DiscoverTab ({ navigation }) { return (<Discover/>); }
+
 function AccountTab ({ navigation }) {
     return (
         <View style={styles.loginContainer}>
             <Text>Account</Text>
-        </View>
-    );
-}
-
-function DiscoverTab ({ navigation }) {
-    return (
-        <View style={styles.loginContainer}>
-            <Text>Discover</Text>
         </View>
     );
 }
