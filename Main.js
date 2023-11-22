@@ -6,11 +6,40 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Discover from './Discover/Discover.js';
 import { CalendarScreenComponent } from './Calendar/CalendarScreen.js'
 import { styles } from './Styles.js';
-
+import { AllEvents, EventView, AddEvent } from './Event';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-const Tab = createBottomTabNavigator();
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
+
+const Stack = createStackNavigator();
 export function Main({ logout }) {
+    return (
+        <NavigationContainer
+            independent={true}
+        >
+          <Stack.Navigator screenOptions={{
+            cardStyle: { backgroundColor: '#292929' },
+            headerBackTitle: 'back',
+            headerTitle: '',
+            headerTransparent: true,
+            headerTintColor: 'white',
+        }}>
+            <Stack.Screen
+              name="Tab"
+              component={mainTab}
+              initialParams={{ logout: logout }}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen name="EventView" component={EventView} />
+            <Stack.Screen name="AddEvent" component={AddEvent} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      );
+}
+
+const Tab = createBottomTabNavigator();
+export function mainTab({ logout }) {
     return (
         <Tab.Navigator
             screenOptions={{

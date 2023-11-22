@@ -79,5 +79,32 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontWeight: '200',
     },
-
+    dropDown: {
+        width: 20,
+        height: 25,
+        marginLeft: 10,
+    },
+    event: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 5,
+        fontSize: 25,
+        color: 'white',
+    },
+    eventForms: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 20,
+        padding: 10,
+        paddingTop: 50,
+    },
+    formTitle: {
+        fontSize: 45,
+        color: 'white',
+        fontWeight: '200',
+    }
 });

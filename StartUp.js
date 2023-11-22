@@ -8,6 +8,8 @@ import { CustomButton } from './Components/CustomButton.js';
 // import { CalendarComponent } from './Calendar.js';
 import { CalendarScreenComponent
  } from './Calendar/CalendarScreen.js';
+ import { EventView, AddEvent } from './Event.js'
+
 const Stack = createStackNavigator();
 
 export function StartUp({ login }) {
