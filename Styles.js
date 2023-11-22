@@ -26,9 +26,16 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 10,
     },
-    calendarTitleDropdown: {
+    calendarScreenContainer: {
+        padding: 15,
+        paddingTop: 40,        
+    },
+    calendarHeaderContainer: {
+        paddingTop: 20,
+        paddingBottom: 10,
         flexDirection: 'row',
-        alignSelf: 'center',
+        justifyContent: 'space-between',
+
     },
     topMenuContainer: {
         flexDirection: 'row',
@@ -37,13 +44,20 @@ export const styles = StyleSheet.create({
         padding: 5,
         backgroundColor: '#292929',
     },
+    calendarName: {
+        paddingLeft: 15,
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
     calendarIconContainer: {
       marginRight: 10,
     },
     calendarIcon: {
-      width: 70,
-      height: 70,
-      marginLeft: 10,
+        width: 70,
+        height: 70,
+        marginLeft: 10,
+        borderRadius: 50,
     },
     calendarInfoContainer: {
       flex: 1,
@@ -54,21 +68,10 @@ export const styles = StyleSheet.create({
       fontSize: 14,
       marginBottom: 5,
     },
-    calendarInfoTextTitle: {
-        color: 'white',
-        fontSize: 18,
-        marginBottom: 5,
-        fontWeight: 'bold',
-    },
-    calendarScreenContainer: {
-        flex: 1,
-        flexDirection: 'column',
-        marginTop: 100,
-    },
-    plusIcon: {
-        fontSize: 45,
-        color: 'white',
-        fontWeight: '200',
+    addEventIcon: {
+        position: 'absolute',
+        top: 675,
+        right: 15,
     },
     calendarIconsContainer: {
         marginRight: 10,
