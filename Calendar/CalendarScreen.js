@@ -5,7 +5,7 @@ import { CalendarComponent } from './Calendar';
 import { AllEvents } from './Event';
 import { styles } from './Styles';
 
-export function CalendarScreenComponent ({ navigation }) {
+export function CalendarScreenComponent ({ }) {
   return (
     <Fragment>
       <View style={styles.calendarScreenContainer}>

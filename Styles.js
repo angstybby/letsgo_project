@@ -1,7 +1,11 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 export const styles = StyleSheet.create({
-    site: {
+    bold: {
+        fontWeight: 'bold',
+    },
+    text: {
+        color: 'white',
     },
     startContainer: {
         flex: 1,
@@ -22,7 +26,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 10,
     },
-    calendar: {},
     calendarTitleDropdown: {
         flexDirection: 'row',
         alignSelf: 'center',

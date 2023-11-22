@@ -1,69 +1,63 @@
-import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { Text, View, Pressable, Image } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import { styles } from './Styles.js';
-import { CustomInputText } from './CustomInputText.js';
-import { CustomButton } from './CustomButton.js';
+import { CustomInputText } from './Components/CustomInputText.js';
+import { CustomButton } from './Components/CustomButton.js';
 // import { CalendarComponent } from './Calendar.js';
 import { CalendarScreenComponent
- } from './CalendarScreen.js';
-import { EventView, AddEvent } from './Event.js'
+ } from './Calendar/CalendarScreen.js';
+ import { EventView, AddEvent } from './Event.js'
 
 const Stack = createStackNavigator();
 
-export function StartUp ({ navigation }) {
+export function StartUp({ login }) {
     return (
         <Stack.Navigator screenOptions={{
             cardStyle: { backgroundColor: '#292929' },
             headerBackTitle: 'back',
             headerTitle: '',
-            headerTransparent: true, // Make the header background transparent
+            headerTransparent: true,
             headerTintColor: 'white',
         }}>
-            <Stack.Screen name="Start" component={StartScreen} />
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="Register" component={Register} />
-            {/* might need to change navigation for calendar vv */}
-            <Stack.Screen name="Calendar" component={CalendarScreenComponent} options={{headerLeft: () => null}} />
-            <Stack.Screen name="EventView" component={EventView}/>
-            <Stack.Screen name="AddEvent" component={AddEvent} />
+            <Stack.Screen name="Start" component={StartScreen} initialParams={{ login: login }}/>
+            <Stack.Screen name="Login" component={Login} initialParams={{ login: login }}/>
+            <Stack.Screen name="Register" component={Register} initialParams={{ login: login }}/>
         </Stack.Navigator>
     );
 }
 
-function StartScreen ({ navigation }) {
+function StartScreen ({ route, navigation }) {
+    const { login } = route.params;
     return (
         <View style={styles.startContainer}>
             <View><Image  source={require('./assets/icon.png')} style={{ width: 200, height: 200 }}/></View>
             <CustomButton body={'Login'} onPress={() => navigation.navigate('Login')}/>
             <CustomButton body={'Register'} onPress={() => navigation.navigate('Register')}/>
-            <Pressable>
+            <Pressable onPress={() => login()}>
                 <Text style={styles.startupLinkText}>join as a guest</Text>
             </Pressable>
         </View>
     );
 }
 
-function Login ({ navigation }) {
-    const handleConfirm = () => {
-        navigation.navigate('Calendar');
-    };
+function Login ({ route, navigation }) {
+    const { login } = route.params;
     return (
         <View style={styles.loginContainer}>
             <View><Image  source={require('./assets/icon.png')} style={{ width: 200, height: 200 }}/></View>
             
             <View><CustomInputText heading={'username or email'}/></View>
             <View><CustomInputText heading={'password'}/></View>
-            <View style={{marginTop: 20}}><CustomButton body={'Confirm'} onPress={handleConfirm}/></View>
+            <View style={{marginTop: 20}}><CustomButton body={'Confirm'} onPress={() => login()}/></View>
         </View>
     );
 }
 
-function Register ({ navigation }) {
-    const handleConfirm = () => {
-        navigation.navigate('Calendar');
-    };
+function Register({ route, navigation }) {
+    const { login } = route.params;
+
     return (
         <View style={styles.loginContainer}>
             <View><Image  source={require('./assets/icon.png')} style={{ width: 200, height: 200 }}/></View>
@@ -72,9 +66,7 @@ function Register ({ navigation }) {
             <View><CustomInputText heading={'email'}/></View>
             <View><CustomInputText heading={'new password'}/></View>
             <View><CustomInputText heading={'confirm password'}/></View>
-            <View style={{marginTop: 20}}><CustomButton body={'Confirm'} onPress={handleConfirm}/></View>
+            <View style={{marginTop: 20}}><CustomButton body={'Confirm'} onPress={() => login()}/></View>
         </View>
     );
 }
-
-

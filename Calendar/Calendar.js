@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useCallback, useMemo } from 'react';
 import { Text } from 'react-native';
 import { Calendar, CalendarUtils } from 'react-native-calendars';
-import { styles } from './Styles';
+import { styles } from '../Styles';
 
 const todaysDate = new Date();
 
@@ -26,7 +26,7 @@ export function CalendarComponent ({navigation}) {
 
   const marked = useMemo(() => {
     return {
-      [getDate(4)]: {
+      [getDate(4, 3)]: {
         dotColor: 'grey',
         marked: true
       },
