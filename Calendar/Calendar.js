@@ -10,7 +10,7 @@ const day = todaysDate.getDate();
 
 const formattedTodaysDate = year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day;
 
-export function CalendarComponent ({navigation}) {
+export function CalendarComponent ({ navigation }) {
   
   const [selected, setSelected] = useState(formattedTodaysDate);
   

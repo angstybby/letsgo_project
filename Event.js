@@ -1,10 +1,8 @@
 import 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import React, { useState, useContext, useEffect } from 'react';
-import { StartUp } from './StartUp.js';
+import React, { useState } from 'react';
 import { styles } from './Styles.js';
 import { StyleSheet, View, Text, TouchableOpacity, Image, Button, FlatList } from 'react-native';
 import { CustomInputText } from './Components/CustomInputText.js';

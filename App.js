@@ -2,12 +2,10 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { MenuProvider } from 'react-native-popup-menu';
-import { createEvents } from './Event.js';
 
 import React, { useState } from 'react';
 import { StartUp } from './StartUp.js';
 import { Main } from './Main.js';
-import { styles } from './Styles.js';
 
 export default function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,7 +20,7 @@ export default function App() {
 
     return (
         <MenuProvider>
-        <NavigationContainer styles={styles.site}>
+        <NavigationContainer>
             {!isLoggedIn ? (
                 <StartUp login={login}/>
             ) : (

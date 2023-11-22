@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, FlatList, Text, Image } from 'react-native';
+import { View, FlatList, Text, Image, Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import dStyles from './DiscoverStyles.js'
@@ -10,13 +10,13 @@ function formatDate(date) {
     return(' ' + temp[1] + ' ' + temp[2].substring(0, 3) + ', ' + temp[3]);
 }
 
-export default function DiscoverItemTrack({ data }) {
+export default function DiscoverItemTrack({ data, nav }) {
     return (
         <>
             <Text style={dStyles.discoverTrackHeading}>{data.title}</Text>
             <FlatList
                     data={data.content}
-                    renderItem={({ item }) => <DiscoverItemSummary data={item}/>}
+                    renderItem={({ item }) => <DiscoverItemSummary data={item} nav={nav}/>}
                     ItemSeparatorComponent={() => <View style={{ width: 15 }} />}
                     horizontal={true}
             />
@@ -24,21 +24,21 @@ export default function DiscoverItemTrack({ data }) {
     )
 }
 
-function DiscoverItemSummary({ data }) {
+function DiscoverItemSummary({ data, nav }) {
     return (
         <View>
         {!data ? 
-        (< View style={[dStyles.discoverImage, dStyles.discoverPlaceholder]}>
+        (<View style={[dStyles.discoverImage, dStyles.discoverPlaceholder]}>
             <Icon name={'heart-circle'} color={'white'} size={70} opacity={0.5}/>
             <Text style={[dStyles.discoverDateText, styles.bold]}>oops!</Text>
             <Text style={[dStyles.discoverDateText, {width: 180, textAlign: 'center'}]}>{'Your favourited events will appear here!'}</Text>
         </View>)
             :
-        (<>
+        (<Pressable onPress={() => nav.navigate('EventScreen', { data: data, isOwn: false })}>
             <Image style={dStyles.discoverImage} source={data.image}/>
             <Text style={dStyles.discoverDateText}><Text style={styles.bold}>{data.date.substring(0, 3)}</Text>{formatDate(data.date)}</Text>
             <Text style={dStyles.discoverTitleText}>{data.title}</Text>
-        </>)
+        </Pressable>)
         }
         </View>
     )
